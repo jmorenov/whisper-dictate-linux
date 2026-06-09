@@ -33,5 +33,11 @@ Thumbs.db
 *cursor*
 *chat*.json
 
+# Build artifacts
+*.egg-info/
+build/
+dist/
+*.egg
+
 # Local config (user-specific)
 config.toml

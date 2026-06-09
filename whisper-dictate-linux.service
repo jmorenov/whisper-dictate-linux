@@ -5,7 +5,7 @@ PartOf=graphical-session.target
 
 [Service]
 Type=simple
-ExecStart=%h/code/whisper-dictate-linux/whisper-dictate-linux
+ExecStart=%h/code/whisper-dictate/whisper-dictate-linux
 Restart=on-failure
 RestartSec=2
 # Pass the Wayland / D-Bus session variables so wtype / wl-copy / notify-send work.

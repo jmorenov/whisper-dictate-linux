@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "whisper-dictate"
+version = "1.0.0"
+description = "Push-to-talk voice dictation for Linux. 100% offline, powered by whisper.cpp."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "jmorenov", email = "jmorenov28@gmail.com"}
+]
+keywords = ["voice", "dictation", "whisper", "linux", "speech-to-text", "wayland"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Multimedia :: Sound/Audio :: Speech",
+    "Topic :: Utilities",
+]
+dependencies = [
+    "evdev>=1.9",
+]
+
+[project.urls]
+Homepage = "https://github.com/jmorenov/whisper-dictate-linux"
+Documentation = "https://github.com/jmorenov/whisper-dictate-linux/blob/main/README.md"
+Repository = "https://github.com/jmorenov/whisper-dictate-linux"
+Issues = "https://github.com/jmorenov/whisper-dictate-linux/issues"
+
+[project.scripts]
+whisper-dictate = "dictate:main"
