@@ -1,4 +1,37 @@
+# Python
 .venv/
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Audio recordings (temp wav files from testing)
 *.wav
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Models (large binary files - user downloads separately)
+*.bin
+*.gguf
+*.onnx
+
+# Session data
+.cursor/
+*cursor*
+*chat*.json
+
+# Local config (user-specific)
+config.toml
