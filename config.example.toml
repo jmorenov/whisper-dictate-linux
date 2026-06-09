@@ -1,0 +1,29 @@
+# whisper-dictate-linux configuration.
+# Copy to ~/.config/whisper-dictate/config.toml and edit.
+
+# Key to HOLD while speaking (evdev KEY_* name). Examples:
+#   KEY_RIGHTCTRL, KEY_RIGHTALT, KEY_CAPSLOCK, KEY_F12, KEY_SCROLLLOCK
+ptt_key = "KEY_RIGHTCTRL"
+
+# Path to the ggml model. Empty = auto-detect (~/.cache/whisper/ggml-large-v3-turbo.bin).
+model = ""
+
+# Whisper language code ("es", "en", ...) or "auto" to detect.
+# NOTE: "auto" often fails and defaults to English. For Spanish dictation,
+# set this explicitly to "es".
+language = "es"
+
+# 0 = let whisper-cli decide the thread count.
+threads = 0
+
+# 0 = greedy decoding (fastest). 2+ enables beam search (slower, more accurate).
+beam_size = 0
+
+# Ignore key taps shorter than this (seconds) to avoid empty recordings.
+min_record_secs = 0.3
+
+# Desktop notifications for state (recording / transcribing).
+notify = true
+
+# Per-keystroke delay for wtype in ms (0 = as fast as possible).
+type_delay_ms = 0

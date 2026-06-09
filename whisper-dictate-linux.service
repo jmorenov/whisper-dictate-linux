@@ -1,0 +1,16 @@
+[Unit]
+Description=Push-to-talk dictation (whisper.cpp)
+After=graphical-session.target
+PartOf=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=%h/code/whisper-dictate-linux/whisper-dictate-linux
+Restart=on-failure
+RestartSec=2
+# Pass the Wayland / D-Bus session variables so wtype / wl-copy / notify-send work.
+# Make sure to import them first:  systemctl --user import-environment WAYLAND_DISPLAY XDG_RUNTIME_DIR
+PassEnvironment=WAYLAND_DISPLAY XDG_RUNTIME_DIR DBUS_SESSION_BUS_ADDRESS
+
+[Install]
+WantedBy=graphical-session.target

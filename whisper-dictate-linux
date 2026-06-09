@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Launcher: runs the dictation daemon with the project's virtualenv.
+set -euo pipefail
+HERE="$(cd "$(dirname "$(readlink -f "$0")")" && pwd)"
+
+# Ensure common binary directories are in PATH (Homebrew, local, etc.).
+export PATH="$HOME/.local/bin:$HOME/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/bin:$PATH"
+
+exec "$HERE/.venv/bin/python" "$HERE/dictate.py" "$@"
